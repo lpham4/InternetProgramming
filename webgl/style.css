@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+}
+
+canvas {
+    display: block;
+    width: 400px;
+    height: 350px;
+    margin: auto;
+    padding: 0;
+    border: none;
+    background-color: lightgrey;
+}
+
+button {
+    display: block;
+    font-size: inherit;
+    margin: auto;
+    padding: 0.6em;
+}
+

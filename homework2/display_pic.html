@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File</title>
+</head>
+<body>
+<div class="File">
+    <form>
+        File Name: <input id ="name" type ="text" name ="name" />
+        <button id ="button" type ="button" onclick="openFile()">Open</button>
+    </form>
+    <p id ="message"></p>
+    <img src ="dessert.jpg" id ="img" style ="display: none">
+</div>
+
+<script>
+    function openFile(){
+        var string = document.getElementById("name").value;
+        var string2 = document.getElementById("img").value = "dessert.jpg";
+        if (string.match(string2)){
+            var pic = document.createElement("IMG");
+            pic.setAttribute("src", "dessert.jpg");
+            pic.setAttribute("width", "300");
+            pic.setAttribute("height", "350");
+            document.body.appendChild(pic);
+        }
+        else{
+            document.getElementById("message").innerHTML = "Image does not exist.";
+        }
+    }
+</script>
+
+<style>
+    body{
+        text-align: center;
+        margin: 30px;
+    }
+</style>
+</body>
+
+</html>

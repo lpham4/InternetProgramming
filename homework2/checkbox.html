@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Complete Form</title>
+</head>
+<body>
+
+<div class ="Shipping">
+    Shipping Information</br>
+    <form>
+        Name: <input id ="Name1" type ="text" name ="Name1" />
+        <br>
+        Zip Code: <input id ="zipcode1" type ="text" name ="zipcode1" />
+    </form>
+</div>
+
+<div class ="Check">
+    Same Billing Information?</br>
+    <input id ="Check" type ="checkbox"  name ="Check" onclick ="copy()"/>
+
+</div>
+
+<div class ="Billing">
+    Billing Information</br>
+    <form>
+        Name: <input id ="Name2" type ="text" name ="Name2" />
+        <br>
+        Zip Code: <input id ="zipcode2" type ="text" name ="zipcode2" />
+    </form>
+</div>
+
+<div class ="Button">
+    <button id ="button" type ="button" onclick="message()">Submit</button>
+</div>
+
+<div class ="Text">
+    <p id="display"></p>
+</div>
+
+<script>
+    function copy(){
+        var cbox = document.getElementById("Check");
+        var a1 = document.getElementById('Name1');
+        var a2 = document.getElementById('Name2');
+        var b1 = document.getElementById("zipcode1");
+        var b2 = document.getElementById("zipcode2");
+        if (cbox.checked == true){
+            a2.value = a1.value;
+            b2.value = b1.value;
+        }
+        else{
+            a2.value = "";
+            b2.value = "";
+        }
+    }
+    function message(){
+        var mss = "Submitted";
+        document.getElementById("display").innerHTML = mss;
+    }
+</script>
+
+<style>
+    div{
+        margin: 30px;
+        text-align: center;
+    }
+</style>
+</body>
+
+</html>
